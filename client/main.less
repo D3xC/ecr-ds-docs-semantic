@@ -1,0 +1,214 @@
+/* CSS declarations go here */
+// Color definitions
+@epiq-blue-light:#009FDE;
+@epiq-blue-dark: #003087;
+@epiq-orange: #E87722;
+@wild-blue-yonder: #A3BAC3;
+@ucla-blue: #5A6B8C;
+@maya-blue: #59CAF7;
+
+// Basic Theme
+@primary-border-color: @ucla-blue;
+@primary-text-color: @ucla-blue;
+@primary-content-color: @epiq-blue-dark;
+
+//Card
+@card-heading-text: @epiq-blue-dark;
+@card-subheader: @ucla-blue;
+@card-action-button: {
+  background-color: white;
+  border: 1px double @wild-blue-yonder !important;
+  a {
+    
+    color: @primary-text-color !important;
+  }
+  &:hover {
+    border: none;
+    background-color: @doc-source-btn !important;
+    a {
+      color: white !important;
+    }
+  }
+};
+@plain-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+@doc-cnt: @epiq-blue-light;
+@doc-cnt-text: white;
+
+@navbar: @epiq-blue-dark;
+@navbar-text: white;
+@navbar-text-hover: @maya-blue;
+@doc-source-btn: @epiq-blue-light;
+@doc-tag: @epiq-orange;
+@doc-tag-text:white;
+@doc-tag-ruleset: {
+  background-color: @epiq-orange;
+  color: white;
+  margin-top: 2px;
+};
+
+main {
+  max-height: 100%;
+  padding: 50px 25px 0 25px;
+  .container {
+    height: 100% !important;
+  }
+}
+
+.epiq-logo {
+  height: 4rem !important;
+  width: 9rem !important;
+  padding-top: 10px !important;
+}
+
+// Navbar
+
+.top-menu {
+  max-height: 80px;
+  background-color: @navbar !important;
+  color: @navbar-text !important;
+  &:active {
+    .navbar-item  {
+      a {
+        color: @navbar-text-hover !important;
+      }
+    }
+  }
+  .navbar-item {
+    a {
+      color: @navbar-text !important;
+      &:hover {
+        color: @navbar-text-hover !important;
+      }
+      &:active {
+        color: @navbar-text-hover !important;
+      }
+    }
+  }
+}
+
+.category-dropdown {
+  background-color: @epiq-orange !important;
+  color: white !important;
+  & > .menu-item {
+    color: white !important;
+    &:hover {
+      color: white !important;
+    }
+  }
+  &:hover {
+    color: white !important;
+  }
+}
+
+
+// docList
+.doc-list-menu {
+  border-right: none !important;
+  width: 100% !important;
+}
+
+.sidebar {
+  padding: 0 10px 50px 10px;
+}
+
+.doc-list-card, .docstats-card, .doc-card, .comments-card {
+  box-shadow: @plain-box-shadow, @plain-box-shadow !important;
+}
+
+.doc-list-title {
+  color: @card-heading-text !important;
+}
+
+.doc-list {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  .doc-list-item {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: @primary-text-color !important;
+    &:hover {
+      font-weight: bold;
+      // border-bottom: 2px solid @card-heading-text !important;
+    }
+  }
+}
+
+.doc-title {
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.doc-content {
+  color: @primary-content-color !important;
+  font-size: 16px;
+}
+
+.doc-title, .docstats-card .content .sub-header  {
+  color: @primary-text-color !important;
+}
+
+.doc-tag {
+  margin-right: 25px;
+  &.label {
+    @doc-tag-ruleset();
+  }
+}
+
+.doc-cnt {
+  background-color: @doc-cnt !important;
+  color: @doc-cnt-text !important;
+}
+
+.tag-list {
+  margin-top: 5px;
+}
+
+.doc-stats-btn {
+  background-color: white;
+  border: 1px double @wild-blue-yonder !important;
+  a {
+    
+    color: @primary-text-color !important;
+  }
+  &:hover {
+    border: none;
+    background-color: @doc-source-btn !important;
+    a {
+      color: white !important;
+    }
+  }
+}
+
+.category-item {
+  color: @primary-text-color !important;
+  &:hover {
+    background-color: @card-heading-text !important;
+    color: white !important;
+  }
+}
+
+.menu-icon, .active-menu {
+  color: white !important;
+  font-size: 1.75rem !important;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.dashboard, .main-menu {
+  background-color: @navbar !important;
+}
+
+.slack-page, .pusher {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.author {
+  font-style: italic;
+  color: @epiq-orange !important;
+}
+
+.comments-card{
+  width: 100% !important;
+}

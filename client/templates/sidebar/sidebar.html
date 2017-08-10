@@ -1,0 +1,12 @@
+<template name="sidebar">
+  <div class="ui left sidebar main-sidebar">
+    <div class="ui large secondary inverted vertical menu">
+      <a class="item"><img src="/epiq-logo-white-simple.svg" class="ui logo" /></a>
+      <a class="item main-sidebar-item" href="{{pathFor 'dashboard'}}"><i class="icon dashboard"></i>Dashboard</a>
+      <a class="item main-sidebar-item" href="{{pathFor 'requests'}}"><i class="icon send"></i>Service Requests</a>
+      <a class="item main-sidebar-item" href="{{pathFor 'documents'}}"><i class="icon file"></i>Docs</a>
+      <a class="item main-sidebar-item" href="{{pathFor 'slack'}}"><i class="icon slack"></i>Slack</a>
+      <a class="item main-sidebar-item" href="{{pathFor 'filesystem'}}"><i class="icon folder open"></i>File System</a>
+    </div>
+  </div>
+</template>

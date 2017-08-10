@@ -1,0 +1,16 @@
+<template name="comments">
+  <div class="ui card comments-card">
+    <div class="content doc-list-title"><div class="header doc-list-title">Comments<span class="ui label right floated doc-cnt">{{comments.count}}</span></div></div>
+    <div class="content">
+      <div class="ui comments">
+        {{#each comment in comments}}
+          <div id="{{comment._id}}" class="comment">
+            <div class="author">{{comment.author}}</div>
+            <div class="text">{{comment.text}}</div>
+            <div class="actions"><a class="reply">Reply</a></div>
+          </div> 
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template>

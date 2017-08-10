@@ -1,0 +1,14 @@
+<template name="docList">
+  <div class="ui card doc-list-card">
+    <div class="content doc-list-title"><div class="header doc-list-title">{{sideMenuTitle}}<span class="ui label right floated doc-cnt">{{docItems.count}} docs</span></div></div>
+    <div class="content doc-list">
+      <div class="ui large secondary vertical menu doc-list-menu">
+        {{#each doc in docItems}}
+        <a href="#" id="{{doc._id}}" class="item doc-list-item">
+            <i class="icon file text"></i>
+            &nbsp;&nbsp;&nbsp;{{doc.title}}
+          </a> {{/each}}
+      </div>
+    </div>
+  </div>
+</template>

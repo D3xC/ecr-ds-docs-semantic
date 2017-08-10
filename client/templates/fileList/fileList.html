@@ -1,0 +1,14 @@
+<template name="fileList">
+  <div class="ui card doc-list-card">
+    <div class="content doc-list-title"><div class="header doc-list-title">Files<span class="ui label right floated doc-cnt">{{files.length}}</span></div></div>
+    <div class="content doc-list">
+      <div class="ui large secondary vertical menu doc-list-menu">
+        {{#each file in files}}
+        <a href="#" id="{{file}}" class="item doc-list-item">
+            <i class="icon file text"></i>
+            &nbsp;&nbsp;&nbsp;{{file}}
+          </a> {{/each}}
+      </div>
+    </div>
+  </div>
+</template>

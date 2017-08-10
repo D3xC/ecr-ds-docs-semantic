@@ -1,0 +1,30 @@
+<template name="docStats">
+  <div class="ui card docstats-card">
+    <div class="content">
+      <div class="header sidebar-title">Doc Stats</div>
+    </div>
+
+    <div class="content">
+      <div class="ui sub-header"><b>Tags</b></div>
+      <div class="tag-list">
+        {{#each tag in activeDoc.tags}}
+          <div class="doc-tag">
+            <span class="ui doc-tag tiny label">
+            <!--<i class="hashtag icon"></i>-->
+              {{tag}}
+            </span>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    
+    <div class="content">
+      <div class="ui sub-header"><b>Comments</b></div>
+    </div>
+
+    <div class="extra content">
+      <button class="ui button doc-stats-btn"><a href="{{activeDoc.source}}">View Source</a></button>
+    </div>
+
+  </div>
+</template>

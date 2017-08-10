@@ -1,0 +1,26 @@
+<template name="navbar">
+
+  <div class="ui top large secondary menu top-menu">
+    <div class="item">
+      <button class="ui item icon button main-menu"><i class="options icon menu-icon"></i></button>
+    </div>
+    <div class="item">
+      <div class="ui item">
+        <img src="/epiq-logo-white-simple.svg" class="ui logo epiq-logo" />
+      </div>
+    </div>
+
+    <div class="item right">
+      <button class="ui labeled icon button dashboard simple dropdown">
+        <i class="circle notched icon menu-icon"></i>
+        <div class="active-menu">{{activeCategory}}</div>
+        <div class="secondary menu category-dropdown">
+          {{#each item in navbarItems}}
+            <a id="{{item._id}}" class="item menu-item {{activeItem(item.title)}}" href="#">{{item.title}}</a>
+          {{/each}}
+        </div>
+      </button>
+    </div>
+  </div>
+
+</template>

@@ -1,0 +1,19 @@
+<template name="documents">
+  <header>
+    {{> navbar}}
+  </header>
+  <main>
+    <div class="ui grid three columns">
+      <div class="three wide column">
+        {{> docList}}
+        {{> docStats}}
+      </div>
+      <div class="nine wide column">
+        {{> doc}}
+      </div>
+      <div class="four wide column">
+        {{> comments}}
+      </div>
+    </div>
+  </main>
+</template>
